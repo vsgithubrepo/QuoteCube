@@ -15,7 +15,7 @@ build/
 .env.test.local
 .env.production.local
 *.env
-*.env*
+
 
 
 # API Keys and secrets
@@ -57,4 +57,4 @@ coverage/
 *.temp
 *.zip
 *.zip*
-*.rar*
+*.rar*Key.txt

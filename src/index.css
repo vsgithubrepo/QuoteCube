@@ -1,0 +1,196 @@
+/* ============================================================
+   QuoteCube V2 — eTechCube Brand Design System
+   Colors: Navy #162032 + Amber #F5A623 + Teal #0D9488
+   Fonts: DM Serif Display (headings) + Nunito Sans (body)
+   Inspired by: eTechCube brand brochure
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* eTechCube Brand Colors */
+  --navy:        #162032;
+  --navy-deep:   #0C1520;
+  --navy-mid:    #1E3048;
+  --navy-light:  #2D4A6A;
+  --navy-muted:  #4A6A8A;
+  --navy-pale:   #C8D8E8;
+  --navy-ghost:  #EDF2F7;
+  --navy-snow:   #F7FAFC;
+
+  --amber:       #F5A623;
+  --amber-deep:  #D4891A;
+  --amber-soft:  #FEF3C7;
+  --amber-glow:  rgba(245,166,35,0.15);
+
+  --teal:        #0D9488;
+  --teal-light:  #CCFBF1;
+  --teal-glow:   rgba(13,148,136,0.12);
+
+  --white:       #FFFFFF;
+  --cream:       #FDFCFA;
+  --warm-100:    #FAF8F5;
+  --warm-200:    #F5F0E8;
+
+  --green:       #16A34A;
+  --red:         #DC2626;
+
+  /* Typography */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'Nunito Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;  --sp-6: 24px;  --sp-8: 32px;  --sp-10: 40px;
+  --sp-12: 48px; --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  --shadow-sm:  0 1px 4px rgba(22,32,50,0.08);
+  --shadow-md:  0 4px 16px rgba(22,32,50,0.12);
+  --shadow-lg:  0 12px 40px rgba(22,32,50,0.16);
+  --shadow-xl:  0 24px 64px rgba(22,32,50,0.2);
+
+  --transition: all 0.2s ease;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: var(--font-body); cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+/* ── Layout ──────────────────────────────────────────────── */
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--sp-6); }
+.section    { padding: var(--sp-20) 0; }
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: 11px 22px; border-radius: var(--radius-md);
+  font-size: 0.9rem; font-weight: 700; transition: var(--transition);
+  white-space: nowrap; cursor: pointer; border: none;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-amber {
+  background: var(--amber); color: var(--navy-deep);
+  box-shadow: 0 2px 12px rgba(245,166,35,0.35);
+}
+.btn-amber:hover { background: var(--amber-deep); box-shadow: 0 4px 20px rgba(245,166,35,0.45); }
+
+.btn-navy {
+  background: var(--navy); color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.btn-navy:hover { background: var(--navy-mid); box-shadow: var(--shadow-md); }
+
+.btn-outline {
+  background: transparent; color: var(--navy);
+  border: 1.5px solid var(--navy-pale);
+}
+.btn-outline:hover { border-color: var(--navy-muted); background: var(--navy-ghost); }
+
+.btn-outline-white {
+  background: transparent; color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.3);
+}
+.btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+
+.btn-lg  { padding: 13px 28px; font-size: 0.95rem; }
+.btn-sm  { padding: 7px 14px; font-size: 0.82rem; }
+.btn-full { width: 100%; justify-content: center; }
+
+/* ── Form elements ───────────────────────────────────────── */
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--white);
+  border: 1.5px solid var(--navy-pale);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--navy);
+  transition: var(--transition);
+  outline: none;
+}
+.input:focus { border-color: var(--amber); box-shadow: 0 0 0 3px var(--amber-glow); }
+.input::placeholder { color: var(--navy-muted); font-size: 0.85rem; }
+
+/* ── Section headers ─────────────────────────────────────── */
+.section-overline {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--amber-deep);
+  margin-bottom: var(--sp-4);
+}
+.section-overline::before {
+  content: ''; display: block; width: 24px; height: 2px;
+  background: var(--amber); border-radius: 1px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 400; color: var(--navy);
+  letter-spacing: -0.02em; line-height: 1.2;
+  margin-bottom: var(--sp-4);
+}
+
+.section-subtitle {
+  font-size: 1rem; color: var(--navy-muted);
+  max-width: 520px; line-height: 1.7;
+}
+
+/* ── Divider ─────────────────────────────────────────────── */
+.divider { height: 1px; background: var(--warm-200); }
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes spin     { to { transform: rotate(360deg); } }
+@keyframes shimmer  { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
+
+.anim-fade-up { animation: fadeUp 0.5s ease forwards; opacity: 0; }
+.d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; }
+.d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+.d5 { animation-delay: 0.5s; } .d6 { animation-delay: 0.6s; }
+
+/* ── Accessibility ───────────────────────────────────────── */
+*:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 3px; }
+.skip-link {
+  position: absolute; top: -100px; left: 16px;
+  padding: 10px 20px; background: var(--navy); color: var(--white);
+  border-radius: var(--radius-md); font-weight: 700; z-index: 9999;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 16px; }
+
+/* ── Spinner ─────────────────────────────────────────────── */
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--warm-200);
+  border-top-color: var(--navy);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 var(--sp-4); }
+  .section    { padding: var(--sp-16) 0; }
+}

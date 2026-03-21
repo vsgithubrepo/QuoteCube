@@ -16,10 +16,7 @@ build/
 .env.production.local
 *.env
 
-
-
 # API Keys and secrets
-APIKey.txt
 secrets.txt
 *.key
 *.pem
@@ -55,6 +52,13 @@ coverage/
 # Temporary files
 *.tmp
 *.temp
+
+# Local working files — do not commit
+code repo/
 *.zip
-*.zip*
-*.rar*Key.txt
+*.rar
+*.pdf
+Key.txt
+Tree.txt
+SESSION_HANDOFF*.md
+QuoteCube_*.docx
